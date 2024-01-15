@@ -1,0 +1,473 @@
+ /* =========================================== Global Styling ======================================  */
+
+:root {
+
+  --primary-clr: #2BD17E;
+  --background-clr: #093545;
+  --inputs-clr: #224957;
+  --cards-clr: #092c39;
+  --text-clr: #fff;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+
+  /* font-family: 'Montserrat', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-clr);
+  position: relative;
+}
+
+
+
+
+/* ====================== Heading Styling ===================== */
+
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 600;
+  color: var(--text-clr);
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 600;
+  color: var(--text-clr);
+
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  color: var(--text-clr);
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  color: var(--text-clr);
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--text-clr);
+
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--text-clr);
+
+}
+
+/* ====================== Heading Styling ===================== */
+
+.section-spacing {
+  max-width: 85%;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+/* ====================== Heading Styling ===================== */
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-clr);
+
+}
+
+
+
+
+/* ================================ Global Buttons ===================================== */
+
+.btn-primary {
+  background-color: var(--primary-clr);
+  border: 1px solid var(--primary-clr);
+  border-radius: 10px;
+  padding: 0.8rem 3rem;
+  color: var(--text-clr);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border: 1px solid var(--text-clr);
+  color: var(--text-clr);
+  transition: 0.5s;
+
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--text-clr);
+  border-radius: 10px;
+  color: var(--text-clr);
+  padding: 0.8rem 3rem;
+  color: var(--text-clr);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-clr);
+  border: 1px solid var(--primary-clr);
+  color: var(--text-clr);
+  transition: 0.5s;
+}
+
+/* ================================ Anchor Style ===================================== */
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--primary-clr);
+
+}
+
+/* ================================ Anchor Style ===================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Create A New Movie */
+
+.add-new-movie-content {
+    display: grid;
+    grid-template-columns: 370px 360px 200px;
+    justify-content: space-between;
+    grid-gap: 8rem;
+    padding-top: 5rem;
+
+}
+
+.upload-movie-img {
+    text-align: center;
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    /* padding: 10rem 0; */
+    height: 450px;
+    width: 100%;
+    background-color: var(--inputs-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.upload-movie-img img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.upload-movie-img svg {
+    color: #fff;
+    font-size: 18px;
+}
+
+.add-movie-form form input[type='text']:first-child {
+    margin-top: 0;
+
+}
+
+.add-movie-form form input[type='number']:nth-child(2) {
+    width: 216px;
+}
+
+.add-movie-btns {
+    padding-top: 1.8rem;
+    display: flex;
+}
+
+.add-movie-btns .btn-secondary {
+    padding: 0.8rem 3rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 0.8rem;
+}
+
+.add-movie-btns .btn-secondary:hover {
+    background-color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+}
+
+.add-movie-btns .btn-primary,
+.add-movie-btns .btn-secondary {
+    padding: 0.8rem 3rem
+}
+
+.add-new-movie-content.drag-active {
+    border: 2px dashed #3498db;
+    background-color: #f0f8ff;
+}
+
+.movie-not-found-wrapper.section-spacing {
+    padding: 10rem 0;
+}
+
+/* .movie-not-found {
+    min-height: 100vh;
+} */  
+  
+  /* Edit Movie */
+.movie-signup-wrapper {
+    text-align: center;
+    max-width: 300px;
+}
+
+.movie-signup-form form {
+    position: relative;
+    bottom: 110px;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.movie-signup-form form input {
+    background-color: var(--inputs-clr);
+    border: none;
+    padding: 0.9rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 10px;
+    color: #fff;
+  
+}
+  
+.movie-signup-form form input::placeholder {
+    font-size: 14px;
+    line-height: 24px;
+    color: #bebcbcd0;
+  
+}
+  
+.movie-signup-form form input[type='submit'] {
+    background-color: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+    cursor: pointer;
+}
+  
+.movie-signup-form form .btn-primary:hover {
+    background-color: transparent;
+    border: 1px solid var(--text-clr);
+    color: var(--text-clr);
+    transition: 0.5s;
+}
+  
+.movie-signup-form form input[type='checkbox'] {
+    background-color: var(--inputs-clr);
+    border: none;
+}
+  
+.movie-chkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    color: #fff;
+}
+  
+.movie-signup-content h1 {
+    padding-bottom: 1.5rem;
+}
+
+
+/* ============================================= Media Queries (1024px) ============================================ */
+
+@media(max-width:1024px) {
+    .section-spacing {
+        max-width: 90%;
+    }
+
+    .movie-signup-wrapper {
+        max-width: auto;
+    }
+
+    .add-new-movie-content {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-gap: 4rem !important;
+        padding-top: 4rem !important;
+    }
+}
+
+
+
+/* ============================================= Media Queries (767px) ============================================ */
+
+@media(max-width:767px) {
+
+    /* .movie-nav {
+        display: none;
+    } */
+
+    .section-spacing {
+        max-width: 90% !important;
+        padding: 4rem 0 !important;
+    }
+
+    .movies-list-wrapper.section-spacing {
+        padding: 0 !important;
+
+    }
+
+    /* .movie-signup-wrapper {
+        max-width: 380px !important;
+    } */
+
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h4 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .movies-list-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        row-gap: 2.8rem !important;
+        column-gap: 1rem !important;
+
+    }
+
+    .movie-card {
+        padding: 0 0 1rem 0 !important;
+    }
+
+    .movie-card-content {
+        padding: 0.6rem 0.9rem 0 0.9rem !important;
+    }
+
+    .movie-card-content h5 {
+        padding-bottom: 0.5rem !important;
+    }
+
+    .add-new-movie-content {
+        display: grid !important;
+        grid-template-columns: 99% !important;
+        grid-gap: 0.5rem !important;
+        padding-top: 4rem !important;
+        padding-bottom: 6rem !important;
+    }
+
+    .movie-signup-form{
+        width: 100%;
+    }
+    .movie-signup-form form{
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .movie-signup-form form input {
+
+        margin: 0.5rem 0 !important;
+    }
+
+    .add-movie-form form input[type='number']:nth-child(2) {
+        width: auto !important;
+    }
+
+    .movie-signup-form.add-movie-form {
+        order: 0;
+    }
+
+    .upload-movie-img {
+        order: 1;
+        height: 370px !important;
+    }
+
+    .movie-not-found-wrapper.section-spacing {
+        padding: 10rem 0 4rem 0 !important;
+    }
+
+    .add-new-movie-content {
+        position: relative;
+    }
+
+    .add-movie-btns {
+        /* padding-top: 1.8rem;
+        display: flex; */
+        position: absolute;
+        top: 480px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        gap: 1rem;
+        /* flex-wrap: wrap; */
+    }
+
+}
+
+@media(max-width:450px) {
+
+    .movie-fooetr-wrapper {
+        padding: 3.5rem 0 !important;
+        /* background-image: url('../public/images/vector-mobile.png') !important; */
+        background-position: center center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+
+@media(max-width:380px) {
+
+    .add-movie-btns {
+
+        display: grid !important;
+        max-width: 100%;
+        grid-template-columns: 100%;
+        width: 100%;
+        grid-gap: 0rem;
+    }
+
+    .add-new-movie-content {
+        padding-bottom: 10rem !important;
+    }
+
+}

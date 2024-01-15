@@ -1,13 +1,376 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+    margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background-color: #093545;
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;
+}
+.layer {
+  position: block;
+  /* margin-top: 300px; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+}
+
+.layer img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* @media (max-width: 350px) {
+  .layer {
+    width: 300px;
+  }
+} */
+
+/* Navbar */
+
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    /* flex-basis: 400px;  */
+    flex-wrap: wrap;
+    align-items: center;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    border-bottom: 1.5px solid #f2f2f2;
+    box-shadow: 5px 6px 8px rgba(180, 180, 180, 0.1); /* Adjust the values as needed */
+}
+.navbar .links {
+    /* margin-left: auto; */
+}
+.navbar h1,
+.navbar a {
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar h1 {
+    color: #2BD17E;
+    font-size: 32px;
+    cursor: pointer;
+  }
+.navbar a {
+    font-size: 23px;
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    color: #2BD17E;
+}
+.navbar h1:hover,
+.navbar a:hover {
+    color: #ffffff; /* Change to your desired hover color */
+}
+
+/* Media query for tablets and smaller screens */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 0px;
+    }
+
+    .navbar h1 {
+        font-size: 28px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 0px;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+}
+
+/* Signup */
+.create {
+    margin-top: 45px ;
+    max-width: 400px;
+    height: 440px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .create h2 {
+    font-size: 64px;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+  .create input{
+    background: #224957;
+    width: 300px;
+    padding: 5px 16px;
+    margin-bottom: 15px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    color: #fff;
+}
+.create input::placeholder{
+    /* color: #fff; */
+    letter-spacing: 0.7px;
+    font-size: 15px;
+    color:rgb(214, 222, 228);
+    
+  }
+    
+  .create button {
+    background: #2BD17E;
+    width: 300px;
+    color: #fff;
+    height: 50px;
+    border: 0;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Signin   */
+
+  .remember-me {
+    display: flex;
+    margin-top: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .remember-me input[type="checkbox"] {
+    width: 15px;
+    height: 25px;
+    position: relative;
+    top: 3px;
+    left: 20px; 
+    appearance: none;
+    border: 2px solid #224957;
+    background-color: #224957;
+    cursor: pointer;
+  }
+  
+  .remember-me input[type="checkbox"]:checked {
+    background-color: #2BD17E;
+  }
+  
+  .remember-me p {
+    position: relative;
+    right: 50px;
+    font-size: 13px;
+    color: rgb(214, 222, 228);
+    cursor: pointer;
+  }
+  
+/* Movies */
+
+.movies {
+  padding: 60px 60px;
+}
+
+.add-section {
+  height: 60px;
+  color: #fff;
+}
+
+.add-div {
+  width: 400px;
+  position: absolute;
+}
+
+.add-div a {
+  text-decoration: none;
+}
+
+.add-heading {
+  color: #fff;
+  display: flex;
+  width: 100%;
+}
+
+.add-heading h2 {
+  font-size: 48px;
+  width: 310px;
+}
+
+.movies-panel {
+  /* border: 2px solid greenyellow; */
+  margin-top: 5rem;
+  color: #fff;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  background: #092c39;
+  height: 100%; /* Set a fixed height for movie items */
+  width: 100%;
+}
+
+.movie-image {
+  width: 100%;
+  height: 300px; /* Set a fixed height for movie images */
+  object-fit: cover;
+}
+
+.movie-item p {
+  margin-top: 10px;
+}
+
+.movie-title {
+  font-size: 20px;
+  word-wrap: break-word; /* Add this line to enable word wrapping */
+  /* width: 70%; */
+  /* position: relative; */
+  /* right: 45px; */
+}
+
+.movie-date {
+  color: rgb(222, 225, 228);
+  font-size: 14px;
+  font-weight: 400;
+  /* display: block;
+  position: relative;
+  left: 1px; */
+}
+
+.edit-link{
+  position: relative;
+  bottom: 22px;
+  float: right;
+  cursor: pointer;
+}
+.edit-icon{
+  color: #fff;
+}
+
+.heart{
+  position: relative;
+  /* left: 30px; */
+  top: 10px;
+  cursor: pointer;
+  float: right;
+  z-index: 1;
+}
+
+.pagination {
+  display: flex;
+  height: 40px;
+  margin-top: 70px;
+}
+
+.button-container {
+  display: flex;
+  width: 210px;
+}
+
+.prev {
+  position: relative;
+  left: 10px;
+}
+
+.next {
+  position: relative;
+  right: 10px;
+}
+
+.button-container button {
+  cursor: pointer;
+  color: #fff;
+  background: #093545;
+  border-style: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-around;
+  width: 90px;
+  padding: 0px 20px;
+  justify-items: center;
+  gap: 10px;
+}
+
+.pages li {
+  list-style: none;
+  margin: 0px 0px;
+  color: white;
+  cursor: pointer;
+  width: 32px;
+  padding: 8px 14px;
+  text-align: center;
+  background: #092c39;
+  border-radius: 5px;
+}
+
+.pages li:hover {
+  background: #2bd17e;
+}
+
+.pages li.active {
+  background-color: #2bd17e; /* Set your desired background color for the active page */
+  font-weight: bold; /* Optionally, set a bold font for the active page */
+  /* Add any other styling you want for the active page */
+}
+
+/* Default 4 columns for large screens */
+@media (min-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Increase columns for larger screens */
+@media (min-width: 1600px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Adjust for medium-sized screens */
+@media (max-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-item {
+    height: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .add-div {
+    width: 250px;
+  }
 }
