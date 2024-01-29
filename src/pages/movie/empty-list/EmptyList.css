@@ -1,0 +1,9 @@
+.movie-not-found {
+    text-align: center;
+    /* border: 2px solid black; */
+    height: 220px;
+}
+
+.movie-not-found-wrapper h2 {
+    padding-bottom: 3rem;
+}

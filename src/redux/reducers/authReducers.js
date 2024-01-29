@@ -2,8 +2,8 @@
 const initState = {
     token: null,
     user: {},
-    authenticate: false,
-    authenticating: false,
+    authenticated: false,
+    loading: false,    
     error: null
 };
 
@@ -14,7 +14,7 @@ export default (state = initState,  action) =>
         case 'LOGIN_REQUEST':
             state = {
                 ...state,
-                authenticating: true
+                loading: true
             }
         break;
 
@@ -23,31 +23,35 @@ export default (state = initState,  action) =>
                 ...state,
                 user: action.payload.user,
                 token: action.payload.token,
-                authenticate: true,
-                authenticating: false
+                authenticated: true,
+                loading: false
             }
         break;
         case 'LOGIN_FAILURE':
             state = {
                 ...state,
-                authenticating: false,
+                loading: false,
                 error: action.payload.error
             }
         break;    
 
         case 'LOGOUT_REQUEST':
         state = {
-            ...initState,
-            authenticate: false,
-            token: null
+            ...state,
+            loading: true
         }
         break;
         
         case 'LOGOUT_SUCCESS':
         state = {
-            ...initState,
-            token: null,
-            user: {}
+            ...initState
+        }
+        break;
+        case 'LOGOUT_FAILURE':
+        state = {
+            ...state,
+            error: action.payload.error,
+            loading: false
         }
         break;
 
